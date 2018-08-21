@@ -16,15 +16,17 @@
 </template>
 
 <script>
-  import { requestLogin } from '../api/api';
+  import { requestLogin,apiAxios } from '../api/api';
+  import qs from "qs"
+  import axios from "axios"
   //import NProgress from 'nprogress'
   export default {
     data() {
       return {
         logining: false,
         ruleForm2: {
-          account: '',
-          checkPass: ''
+          account: 'fangtao',
+          checkPass: '123456'
         },
         rules2: {
           account: [
@@ -47,13 +49,14 @@
         var _this = this;
         this.$refs.ruleForm2.validate((valid) => {
           if (valid) {
-            //_this.$router.replace('/table');
             this.logining = true;
-            //NProgress.start();
-            var loginParams = { username: this.ruleForm2.account, password: this.ruleForm2.checkPass };
-            requestLogin(loginParams).then(data => {
+            var loginParams = { name: this.ruleForm2.account,password: this.ruleForm2.checkPass };
+            console.log(loginParams);
+            requestLogin(loginParams)
+            .then(data => {
+              console.log(data);
               this.logining = false;
-              //NProgress.done();
+             
               let { msg, code, user } = data;
               if (code !== 200) {
                 this.$message({
@@ -62,7 +65,7 @@
                 });
               } else {
                 sessionStorage.setItem('user', JSON.stringify(user));
-                this.$router.push({ path: '/table' });
+                this.$router.push({ path: '/main' });
               }
             });
           } else {

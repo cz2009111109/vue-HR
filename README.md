@@ -22,16 +22,33 @@ npm run build
 * dist - build
 * src -your app
     * api
+
+      * api.js 公共变量
+      * index.js 导入api.js
     * assets
+
+      * theme-darkblue 样式模块
+      * theme-green 样式模块
     * common
+
+      * 工具类
+        * util.js 工具类
     * components - your vue components
-    * mock
+    * mock 数据模拟配置
+
+      *  data
+         * user.js 模拟用户登录数据
+      *  index.js  导入mock.js
+      *  mock.js 生成模拟数据配置
     * styles
+      * vars.scss 样式管理
     * views - your pages
     * vuex
-    * App.vue
+      * KPI  KPI模块
+      * nav1
+    * App.vue 入口文件
     * main.js - main file
-    * routes.js
+    * routes.js 路由配置
 * static - static assets
 
 # Theme

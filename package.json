@@ -10,10 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@handsontable-pro/vue": "^2.0.0",
+    "@handsontable/vue": "^2.0.0",
     "axios": "^0.15.3",
     "echarts": "^3.3.2",
     "element-ui": "^1.2.8",
     "font-awesome": "^4.7.0",
+    "handsontable": "^5.0.1",
+    "handsontable-pro": "^5.0.1",
     "nprogress": "^0.2.0",
     "vue": "^2.5.17",
     "vue-devtools": "^4.1.4",

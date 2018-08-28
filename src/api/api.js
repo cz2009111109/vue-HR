@@ -3,7 +3,7 @@ import qs from 'qs';
 let base = '';
 
 export const requestLogin = params => { 
-    return axios.post(`http://localhost:8087/LabMaven/login`, qs.stringify(params))
+    return axios.post(`http://localhost:8087/login`, qs.stringify(params))
     .then(res => {return { code: 200, msg: '请求成功', user:res.data } })
     .catch(err => {
         console.log(err);

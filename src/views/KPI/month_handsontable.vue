@@ -5,8 +5,11 @@
     <div id="example-container" class="wrapper">
       <HotTable :root="test" :settings="hotSettings"></HotTable>
     </div>
+      <div>
+    <button disabled="disabled">1</button>
+    <button disabled="disabled">2</button>
   </div>
-
+  </div>
 </section>
 
 </template>
@@ -22,7 +25,7 @@
     return {
       test: "test-hot",
       hotSettings: {
-        data:[[],[],[],[]], // 数据在这个里面,由数据填充表
+        data:[], // 数据在这个里面,由数据填充表
         startRows: 10, //初始行列数
         startCols: 35,
         minRows: 1, //最小行列
@@ -30,16 +33,16 @@
         rowHeaders: true, //行表头
         colHeaders: [
           "计划工作事项",
-          "计划工作成果描述",
-          "8月完成情况",
-          "9月计划工作事项",
-          "分数上限",
-          "标准分数",
-          "分数下限",
-          "评分区分",
-          "自评",
-          "复评",
-          "合计"
+          "计划工作描述",
+          "月完成情况",
+          "月计划工作计划",
+          "分数下线",
+          "性别",
+          "出生日期",
+          "结论",
+          "检测类型",
+          "血糖(mmol/L)",
+          "脉率(bpm)"
         ], //自定义列表头or 布尔值
         minSpareCols: 1, //列留白
         // minSpareRows: 2, //行留白
@@ -128,11 +131,10 @@ section{
   width: 100%;
   height: 100%;
   overflow: hidden;
-  
 }
 .overf{
   width: 100%;
-  height: 600px;
+  height: 100px;
   overflow: hidden;
 }
 #example-container{

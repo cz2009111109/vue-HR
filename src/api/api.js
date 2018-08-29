@@ -2,13 +2,14 @@ import axios from 'axios';
 import qs from 'qs';
 let base = '';
 
-export const requestLogin = params => { 
-    return axios.post(`http://localhost:8087/login`, qs.stringify(params))
-    .then(res => {return { code: 200, msg: '请求成功', user:res.data } })
-    .catch(err => {
-        console.log(err);
-        return  { code: 500, msg: '账号或密码错误' }
-    })};
+export const requestLogin = params => { return axios.post(`${base}/login`,  params ).then(res =>  res.data) };
+// export const requestLogin = params => { 
+//     return axios.post(`http://localhost:8087/login`, qs.stringify(params))
+//     .then(res => {return { code: 200, msg: '请求成功', user:res.data } })
+//     .catch(err => {
+//         console.log(err);
+//         return  { code: 500, msg: '账号或密码错误' }
+//     })};
 
 // export const requestLogin= params =>{ 
 //     return  new Promise((resolve,reject)=>{

@@ -11,9 +11,9 @@ import Vuex from 'vuex'
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
-//import Mock from './mock'
+import Mock from './mock'
 import 'font-awesome/css/font-awesome.css'
-//Mock.bootstrap();
+Mock.bootstrap();
 
 
 Vue.use(ElementUI)

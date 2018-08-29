@@ -48,7 +48,7 @@ let routes = [
         children: [
             { path: '/dayReport', component: dayReport, name: '日报' },
             { path: '/weekReport', component: weekReport, name: '周报' },
-            { path: '/monthReport', component: monthReport, name: '月报' }
+            { path: '/monthReport', component: monthReport, name: '月报handsontable' }
         ]
     },
     {
@@ -58,7 +58,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         //leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '导航三' }
+            { path: '/page6', component: Page6, name: '绩效考核表' }
         ]
     },
     {

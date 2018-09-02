@@ -48,7 +48,7 @@ let routes = [
         children: [
             { path: '/dayReport', component: dayReport, name: '日报' },
             { path: '/weekReport', component: weekReport, name: '周报' },
-            { path: '/monthReport', component: monthReport, name: '月报handsontable' }
+            { path: '/monthReport', component: monthReport, name: '月报' }
         ]
     },
     {

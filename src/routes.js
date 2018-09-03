@@ -3,6 +3,11 @@ import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
+import Table1 from './views/nav1/Table1.vue'
+import Table2 from './views/nav1/Table2.vue'
+import Table3 from './views/nav1/Table3.vue'
+import Table4 from './views/nav1/Table4.vue'
+import Table5 from './views/nav1/Table5.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
 import Page4 from './views/nav2/Page4.vue'
@@ -35,7 +40,12 @@ let routes = [
         //leaf: true,//只有一个节点
         children: [
             { path: '/main', component: Main, name: '主页', hidden: false },
-            { path: '/table', component: table, name: '表格' },
+            { path: '/table', component: Table, name: '表格' },
+            { path: '/table1', component: Table1, name: '表格1' },
+            { path: '/table2', component: Table2, name: '表格2' },
+            { path: '/table3', component: Table3, name: '表格3' },
+            { path: '/table4', component: Table4, name: '表格4' },
+            { path: '/table5', component: Table5, name: '表格5' },
             { path: '/form', component: Form, name: 'Form' },
             { path: '/user', component: user, name: '列表' },
         ]

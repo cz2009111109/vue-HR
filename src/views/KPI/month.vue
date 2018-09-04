@@ -73,13 +73,13 @@
 					<el-input v-model="editForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 				<el-form-item label="计划工作">
-					<el-input type="textarea" v-model="editForm.addr"></el-input>
+					<el-input type="textarea"  :autosize="{ minRows: 2, maxRows: 4}" placeholder="请输入内容"  v-model="editForm.addr"></el-input>
 				</el-form-item>
 				<el-form-item :label="month">
-					<el-input type="textarea" v-model="editForm.addr"></el-input>
+					<el-input type="textarea"  :autosize="{ minRows: 2, maxRows: 4}" placeholder="请输入内容"  v-model="editForm.addr"></el-input>
 				</el-form-item>
 				<el-form-item :label="nextMonth">
-					<el-input type="textarea" v-model="editForm.addr"></el-input>
+					<el-input type="textarea"  :autosize="{ minRows: 2, maxRows: 4}" placeholder="请输入内容" v-model="editForm.addr"></el-input>
 				</el-form-item>
 				<el-form-item label="自评">
 					<el-input type="input" v-model="editForm.addr"></el-input>

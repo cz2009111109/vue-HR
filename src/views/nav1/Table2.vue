@@ -4,9 +4,9 @@
   <el-table
     :data="tableData5"
     style="width: 100%">
-    <el-table-column type="expand">
+    <el-table-column type="expand" @expand-change="handleSelectionChange">
       <template slot-scope="props">
-        <el-form label-position="left" inline class="demo-table-expand">
+        <el-form label-position="left" inline class="demo-table-expand" >
           <el-form-item label="商品名称">
             <span>{{ props.row.name }}</span>
           </el-form-item>
@@ -99,6 +99,12 @@
           shop: '王小虎夫妻店',
           shopId: '10333'
         }]
+      }
+
+    },
+    methods:{
+      handleSelectionChange(val){
+        console.log(val);
       }
     }
   }

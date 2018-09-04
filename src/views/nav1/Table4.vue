@@ -1,15 +1,15 @@
 <template >
 <el-table
     :data="tableData3"
-    style="width: 100%" border="true">
-    <el-table-column type="expand">
-      <template slot-scope="props" >
-       <el-table border="true"  style="width:100%;">
-          <el-table-column type="name" label="名称" >
+    style="width: 100%" border highlight-current-row>
+    <el-table-column type="expand" expand-change="handleSelectionChange"  >
+      <template slot-scope="props">
+       <el-table border :data="props.row.data4"  style="width:100%;">
+          <el-table-column prop="name" label="名称" >
           </el-table-column>
-          <el-table-column type="date" label="时间" >
+          <el-table-column prop="date" label="时间" >
           </el-table-column>
-          <el-table-column type="address" label="地址" >
+          <el-table-column prop="address" label="地址" >
           </el-table-column>
         </el-table>
       </template>
@@ -37,45 +37,44 @@
           id:'1',
           desc:'上海市普陀区金沙江路',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          address: '上海市普陀区金沙江路 1518 弄',
+          data4:[{
+            name:'inner table',
+            date:'2016-05-03',
+            address: '上海市普陀区金沙江路 1518 弄'
+          },{
+            name:'inner table',
+            date:'2016-05-03',
+            address: '上海市普陀区金沙江路 1518 弄'
+          },{
+            name:'inner table',
+            date:'2016-05-03',
+            address: '上海市普陀区金沙江路 1518 弄'
+          },]
         }, {
           date: '2016-05-02',
           name: '王小虎',
           id:'2',
           desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
+          address: '上海市普陀区金沙江路 1518 弄',
+          data4:[{
+            name:'inner table',
+            date:'2016-05-03',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }]
+         }, {
           date: '2016-05-04',
           name: '王小虎',
           id:'3',
           desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          id:'4',
-          desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-08',
-          name: '王小虎',
-          id:'5',
-          desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-06',
-          name: '王小虎',
-          id:'6',
-          desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-07',
-          name: '王小虎',
-          id:'7',
-          desc:'上海市普陀区金沙江路',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }],
-        multipleSelection: []
+          address: '上海市普陀区金沙江路 1518 弄',
+          data4:[{
+            name:'inner table',
+            date:'2016-05-03',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }]
+         }],
+        multipleSelection: {}
       }
     },
 
